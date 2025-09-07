@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Fitness Guide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 scroll-smooth">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <a href="#top" class="text-3xl font-bold text-teal-400">POP Fitness</a>
+            <div class="mt-4 md:mt-0 flex gap-4 md:gap-8">
+                <a href="#equipment" class="text-lg font-medium hover:text-teal-400 transition-colors">Equipment</a>
+                <a href="#exercises" class="text-lg font-medium hover:text-teal-400 transition-colors">Exercises</a>
+                <a href="#nutrition" class="text-lg font-medium hover:text-teal-400 transition-colors">Nutrition</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-10">
+
+        <!-- Hero Section -->
+        <section class="mb-12 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">Your Guide to a Healthier You</h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+                Discover the right equipment, master proper exercise forms, and fuel your body with the perfect diet.
+            </p>
+        </section>
+
+        <!-- Gym Equipment Section -->
+        <section id="equipment" class="bg-gray-800 p-8 rounded-xl shadow-lg mb-12">
+            <h2 class="text-4xl font-bold text-teal-400 mb-6 text-center">Gym Equipment</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Treadmill -->
+                <div data-equipment="Treadmill" class="equipment-card bg-gray-700 rounded-xl shadow-md cursor-pointer hover:bg-gray-600 transition-colors overflow-hidden">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.TSEcrcit-ZLWr7-bB8KrMgHaHa?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Treadmill" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Treadmill</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            An excellent cardio machine for running and walking.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Dumbbells -->
+                <div data-equipment="Dumbbells" class="equipment-card bg-gray-700 rounded-xl shadow-md cursor-pointer hover:bg-gray-600 transition-colors overflow-hidden">
+                    <img src="https://pngimg.com/uploads/dumbbell/dumbbell_PNG102652.png" alt="Dumbbells" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Dumbbells</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Versatile free weights for a wide range of strength training exercises.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Barbell -->
+                <div data-equipment="Barbell" class="equipment-card bg-gray-700 rounded-xl shadow-md cursor-pointer hover:bg-gray-600 transition-colors overflow-hidden">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.yMnmTG-schp5o2Zmy0xC5wHaEZ?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Barbell" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Barbell</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Used for compound exercises like squats and deadlifts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cable Machine -->
+                <div data-equipment="Cable Machine" class="equipment-card bg-gray-700 rounded-xl shadow-md cursor-pointer hover:bg-gray-600 transition-colors overflow-hidden">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.sbeuJOzgRnQnwGiEl45ungHaFe?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cable Machine" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Cable Machine</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Provides constant tension throughout an exercise's range of motion.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Leg Press Machine -->
+                <div data-equipment="Leg Press Machine" class="equipment-card bg-gray-700 rounded-xl shadow-md cursor-pointer hover:bg-gray-600 transition-colors overflow-hidden">
+                    <img src="https://cdn.sweatband.com/cybex_vr3_seated_leg_press_cybex_vr3_seated_leg_press__2000x2000.jpg" alt="Leg Press Machine" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Leg Press Machine</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Targets the quadriceps, hamstrings, and glutes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pull-Up Bar -->
+                <div data-equipment="Pull-Up Bar" class="equipment-card bg-gray-700 rounded-xl shadow-md cursor-pointer hover:bg-gray-600 transition-colors overflow-hidden">
+                    <img src="https://i5.walmartimages.com/asr/f4aac981-7b79-432a-81f1-c6b34128d2bc.b6609d20db09f0089320867692e588eb.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Pull-Up Bar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Pull-Up Bar</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            A bodyweight exercise staple for building back and bicep strength.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Exercises Section (Initially hidden) -->
+        <section id="exercise-list" class="bg-gray-800 p-8 rounded-xl shadow-lg mb-12 hidden">
+            <button id="back-button" class="mb-6 px-4 py-2 bg-teal-500 text-white rounded-md hover:bg-teal-600 transition-colors">
+                &larr; Back to Equipment
+            </button>
+            <h2 id="exercise-title" class="text-4xl font-bold text-teal-400 mb-6 text-center"></h2>
+            <div id="exercise-cards-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Exercise cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Nutrition & Diet Section -->
+        <section id="nutrition" class="bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h2 class="text-4xl font-bold text-teal-400 mb-6 text-center">Nutrition & Diet</h2>
+            <p class="text-center text-gray-300 mb-8">
+                Your diet is the foundation of your fitness journey.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Macronutrients -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Macronutrients</h3>
+                    <ul class="list-disc list-inside text-gray-300 leading-relaxed">
+                        <li>
+                            <strong class="text-white">Proteins:</strong> Essential for muscle repair and growth. Found in chicken, fish, eggs, and legumes.
+                        </li>
+                        <li>
+                            <strong class="text-white">Carbohydrates:</strong> The body's primary energy source. Found in oats, rice, bread, and fruits.
+                        </li>
+                        <li>
+                            <strong class="text-white">Fats:</strong> Vital for hormone production and energy. Found in avocados, nuts, seeds, and olive oil.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hydration -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Hydration</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Drinking enough water is critical for athletic performance, nutrient transport, and temperature regulation. Aim for at least 8 glasses per day.
+                    </p>
+                </div>
+
+                <!-- Sample Meal Plan -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-white mb-2">Sample Meal Plan</h3>
+                    <ul class="list-disc list-inside text-gray-300 leading-relaxed">
+                        <li>
+                            <strong class="text-white">Breakfast:</strong> Oatmeal with berries and a scoop of protein powder.
+                        </li>
+                        <li>
+                            <strong class="text-white">Lunch:</strong> Grilled chicken salad with quinoa and a light vinaigrette.
+                        </li>
+                        <li>
+                            <strong class="text-white">Dinner:</strong> Baked salmon with sweet potatoes and steamed broccoli.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Smooth Scrolling JavaScript & Dynamic Content Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const equipmentSection = document.getElementById('equipment');
+            const exerciseListSection = document.getElementById('exercise-list');
+            const exerciseTitle = document.getElementById('exercise-title');
+            const exerciseContainer = document.getElementById('exercise-cards-container');
+            const backButton = document.getElementById('back-button');
+
+            // Data mapping equipment to exercises
+            const exercisesData = {
+                "Treadmill": [
+                    { name: "Incline Walk", description: "Walking at an incline to engage glutes and hamstrings, increasing calorie burn.", image: "https://tse2.mm.bing.net/th/id/OIP.0yaNbkWvxp2w-71GIQ0v9AHaHa?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" },
+                    { name: "Interval Running", description: "Alternating between high-intensity running and low-intensity walking to boost metabolism.", image: "https://i.pinimg.com/originals/bf/fe/f1/bffef17fe963ab3d4cab2cd6af543dce.jpg" },
+                    { name: "Hill Sprints", description: "Simulating uphill sprints to build leg strength and cardiovascular endurance.", image: "data:image/webp;base64,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" }
+                ],
+                "Dumbbells": [
+                    { name: "Dumbbell Bench Press", description: "A great exercise for chest development and stability.", image: "data:image/webp;base64,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" },
+                    { name: "Bicep Curls", description: "A classic isolation exercise to build bicep strength and size.", image: "https://tse3.mm.bing.net/th/id/OIP.9lUSC8-7EUZhFIRHvJn1uwHaFI?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" },
+                    { name: "Dumbbell Squats", description: "Holding dumbbells for added resistance to target legs and glutes.", image: "https://thfvnext.bing.com/th/id/OIP.AyWM1fZDpAGt_1h3XP9GiAHaJ8?w=121&h=180&c=7&r=0&o=7&cb=thfvnext&pid=1.7&rm=3" }
+                ],
+                "Barbell": [
+                    { name: "Barbell Squats", description: "A fundamental compound lift for building lower body strength.", image: "https://images.unsplash.com/photo-1582046554523-28c067e2a912?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Deadlifts", description: "A full-body exercise that builds strength in the back, legs, and core.", image: "https://images.unsplash.com/photo-1571019613454-1cb2fcdb467e?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Overhead Press", description: "A key lift for building shoulder strength and stability.", image: "https://images.unsplash.com/photo-1547481102-15f16b677a83?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" }
+                ],
+                "Cable Machine": [
+                    { name: "Cable Flys", description: "An isolation exercise for targeting the chest muscles.", image: "https://images.unsplash.com/photo-1596765792470-3486c9d74917?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Cable Tricep Pushdowns", description: "Focuses on isolating and strengthening the triceps.", image: "https://images.unsplash.com/photo-1547481102-15f16b677a83?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Cable Rows", description: "Works the muscles of the back, particularly the lats.", image: "https://images.unsplash.com/photo-1571019613454-1cb2fcdb467e?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" }
+                ],
+                "Leg Press Machine": [
+                    { name: "Leg Press", description: "A popular machine exercise for targeting the quads and glutes.", image: "https://images.unsplash.com/photo-1596765792470-3486c9d74917?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Calf Raises", description: "An effective way to isolate and strengthen the calf muscles.", image: "https://images.unsplash.com/photo-1582046554523-28c067e2a912?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" }
+                ],
+                "Pull-Up Bar": [
+                    { name: "Pull-ups", description: "The ultimate bodyweight back and bicep builder.", image: "https://images.unsplash.com/photo-1601007207604-034608c90393?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Chin-ups", description: "Similar to pull-ups but with an underhand grip, placing more emphasis on the biceps.", image: "https://images.unsplash.com/photo-1571019613454-1cb2fcdb467e?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" },
+                    { name: "Hanging Leg Raises", description: "An advanced core exercise to strengthen your abs and hip flexors.", image: "https://images.unsplash.com/photo-1596765792470-3486c9d74917?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=600&h=400" }
+                ]
+            };
+
+            // Event listeners for equipment cards
+            document.querySelectorAll('.equipment-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const equipmentName = card.dataset.equipment;
+                    const exercises = exercisesData[equipmentName];
+
+                    if (exercises) {
+                        // Update title and content
+                        exerciseTitle.textContent = `${equipmentName} Exercises`;
+                        exerciseContainer.innerHTML = ''; // Clear previous exercises
+
+                        exercises.forEach(exercise => {
+                            const exerciseCard = document.createElement('div');
+                            exerciseCard.className = 'bg-gray-700 p-6 rounded-lg shadow-md';
+                            exerciseCard.innerHTML = `
+                                <h3 class="text-2xl font-semibold text-white mb-2">${exercise.name}</h3>
+                                <img src="${exercise.image}" alt="${exercise.name}" class="rounded-lg mb-4 w-full h-auto object-cover">
+                                <p class="text-gray-300 leading-relaxed">${exercise.description}</p>
+                            `;
+                            exerciseContainer.appendChild(exerciseCard);
+                        });
+
+                        // Show the exercise section and hide the main equipment section
+                        equipmentSection.classList.add('hidden');
+                        exerciseListSection.classList.remove('hidden');
+                    }
+                });
+            });
+
+            // Back button functionality
+            backButton.addEventListener('click', () => {
+                equipmentSection.classList.remove('hidden');
+                exerciseListSection.classList.add('hidden');
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
